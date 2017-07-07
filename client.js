@@ -4,6 +4,10 @@ const fs = require('fs');
 
 const client = net.connect({port: 8080}, () => {
 
+  request.on('data', (data) => {
+
+  })
+
 });
 
 
