@@ -3,6 +3,7 @@
 const net = require('net');
 const fs = require('fs');
 
+// Reads contents of file, returns as string
 let index = fs.readFileSync('./index.html');
 let hydrogen = fs.readFileSync('./hydrogen.html');
 let helium = fs.readFileSync('./helium.html');
@@ -26,8 +27,10 @@ const server = net.createServer( (request) => {
 
 
     let headers = data.toString().split('\n');
+    console.log(headers);
     let requestMethod = headers[0].split(' ');
     let pathName = requestMethod[1];
+
 
     switch (pathName) {
 
