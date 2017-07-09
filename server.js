@@ -17,7 +17,6 @@ Date: ${new Date()};
 Content-Type: ${fileType}; charset=utf-8
 Content-Length: ${fileName.length}
 
-
 ${fileName}`;
 }
 
@@ -27,7 +26,6 @@ const server = net.createServer( (request) => {
 
 
     let headers = data.toString().split('\n');
-    console.log(headers);
     let requestMethod = headers[0].split(' ');
     let pathName = requestMethod[1];
 
