@@ -1,4 +1,3 @@
-
 /* jshint esversion: 6 */
 
 const net = require('net');
@@ -22,7 +21,7 @@ client.on('data', (data) => {
 });
 
 client.on('close', () => {
-  console.log("Connection Closed");
+  console.log("Connection is Closed");
 });
 
 
